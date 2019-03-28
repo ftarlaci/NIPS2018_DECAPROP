@@ -94,9 +94,9 @@ def load_set(fp, datatype='train'):
     return all_words, all_data, all_feats
 
 
-train_words, train_data, train_feats = load_set('./corpus/narrativeqa/train.json')
-dev_words, dev_data, dev_feats = load_set('./corpus/narrativeqa/dev.json')
-test_words, test_data, test_feats = load_set('./corpus/narrativeqa/test.json')
+train_words, train_data, train_feats = load_set('./corpus/hotpotqa/train.json')
+dev_words, dev_data, dev_feats = load_set('./corpus/hotpotqa/dev.json')
+test_words, test_data, test_feats = load_set('./corpus/hotpotqa/test.json')
 
 all_words = train_words + dev_words + test_words
 
@@ -114,7 +114,7 @@ print("Vocab Size={}".format(len(word_index)))
 # Convert passages to tokens
 # passages = dict(train_passage.items() + test_passage.items() + dev_passage.items())
 
-fp = './datasets/NarrativeQA/'
+fp = './datasets/HotPotQA/'
 
 if not os.path.exists(fp):
     os.makedirs(fp)
