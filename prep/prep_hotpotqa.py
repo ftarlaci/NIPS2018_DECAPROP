@@ -94,9 +94,9 @@ def load_set(fp, datatype='train'):
     return all_words, all_data, all_feats
 
 
-train_words, train_data, train_feats = load_set('./corpus/hotpotqa/train.json')
-dev_words, dev_data, dev_feats = load_set('./corpus/hotpotqa/dev.json')
-test_words, test_data, test_feats = load_set('./corpus/hotpotqa/test.json')
+train_words, train_data, train_feats = load_set('http://curtis.ml.cmu.edu/datasets/hotpot/hotpot_train_v1.1.json')
+dev_words, dev_data, dev_feats = load_set('http://curtis.ml.cmu.edu/datasets/hotpot/hotpot_dev_distractor_v1.json')
+test_words, test_data, test_feats = load_set('http://curtis.ml.cmu.edu/datasets/hotpot/hotpot_test_fullwiki_v1.json')
 
 all_words = train_words + dev_words + test_words
 
